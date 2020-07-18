@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body>
+<div class="select2-container">
+    <div class="row1">
+        <div class="offset-md-3 col-md-6">
+            {{ details }}
+            <h1>First_name : {{ details.fname|capfirst }} Details</h1>
+            <h2>Last Name : {{ details.lname|capfirst }}</h2>
+            <h2>Email ID : {{ details.email|capfirst }}</h2>
+            <h2>Mobile : {{ details.mobile|capfirst }}</h2>
+            <h2>Company : {{ details.company|capfirst }}</h2>
+            <h2>Location : {{ details.loc|capfirst }}</h2>
+            <a href="/">customer's list</a>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

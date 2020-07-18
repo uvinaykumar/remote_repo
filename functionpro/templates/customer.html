@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'cdnlines.html' %}
+</head>
+<body>
+<div class="container-fliude">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+            {% if customer %}
+                {% for i in customer %}
+                <h1><a href="{% url 'details' i.id %}">{{ i.fname|capfirst }}</a></h1>
+                {% endfor %}
+            {% else %}
+                <h2> Customer Details Not Found</h2>
+            {% endif %}
+        <a href="entry/" class="btn btn-Primary">New Entry</a>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
